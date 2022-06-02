@@ -5,7 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
-
+.isort.cfg
+setup.cfg
 # Distribution / packaging
 .Python
 build/
@@ -146,7 +147,6 @@ dmypy.json
 .mypy_cache
 
 # папки со статикой и медиа
-static/
-posts/static/
 media/
 
+*test_api.http
