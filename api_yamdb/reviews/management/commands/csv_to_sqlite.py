@@ -1,6 +1,7 @@
-from django.core.management.base import BaseCommand
-import sqlite3
 import csv
+import sqlite3
+
+from django.core.management.base import BaseCommand
 
 
 def import_files_csv_to_sqlite():

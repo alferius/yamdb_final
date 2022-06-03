@@ -60,7 +60,7 @@ class SignupViewSet(mixins.CreateModelMixin, GenericViewSet):
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
-def TokenView(request):
+def tokenview(request):
     serializer = TokenSerializer(data=request.data)
     if serializer.is_valid():
         user = get_object_or_404(

@@ -1,7 +1,7 @@
 from django.urls import include, path
 from rest_framework import routers
 
-from .views import MyselfViewSet, SignupViewSet, TokenView, UsersViewSet
+from .views import MyselfViewSet, SignupViewSet, UsersViewSet, tokenview
 
 app_name = 'users'
 
@@ -21,7 +21,7 @@ users_v1.register(
 urlpatterns = [
     path(
         'auth/token/',
-        TokenView,
+        tokenview,
         name='token'),
     path(
         'auth/',
