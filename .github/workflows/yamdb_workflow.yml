@@ -44,7 +44,7 @@ jobs:
         with:
           context: api_yamdb/
           push: true
-          tags: ${{ secrets.DOCKER_TAGS }}
+          tags: alferius/apiyamdb:latest
 
   deploy:
     runs-on: ubuntu-latest
