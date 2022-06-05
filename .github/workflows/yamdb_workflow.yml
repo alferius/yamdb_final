@@ -46,7 +46,8 @@ jobs:
           context: api_yamdb/
           push: true
           tags: alferius/apiyamdb:latest
-
+# Артём, деплой выполнится только после успешного выполнения build_and_push_to_docker_hub, 
+# а в нём в строке 32 есть условие на пуш в мастер и майн. Надо ли дублировать это здесь?
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
@@ -75,6 +76,7 @@ jobs:
           sudo docker-compose up -d
           sudo docker-compose exec -T web python manage.py migrate
           sudo docker-compose exec -T web python manage.py collectstatic --no-input
+          sudo docker-compose exec -T web python manage.py createsuperuser --noinput --username $DJANGO_SUPERUSER_USERNAME --email $DJANGO_SUPERUSER_EMAIL
 
   send_message:
     runs-on: ubuntu-latest
