@@ -1,7 +1,7 @@
-![CI](https://github.com/alferius/yamdb_final/actions/workflows/main.yml/badge.svg)
-**IP для проверки**
-http://51.250.20.58/admin/
-http://51.250.20.58/redoc/
+![CI](https://github.com/alferius/yamdb_final/actions/workflows/main.yml/badge.svg)  
+**IP для проверки**  
+http://51.250.20.58/admin/  
+http://51.250.20.58/redoc/  
 
 **Проект YAMBD — REST API для сервиса YAMBD** — базы отзывов о фильмах, книгах и музыке.
 Сами произведения в YAMBD не хранятся, здесь нельзя посмотреть фильм или послушать музыку.
