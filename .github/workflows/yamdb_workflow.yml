@@ -76,7 +76,10 @@ jobs:
           sudo docker-compose up -d
           sudo docker-compose exec -T web python manage.py migrate
           sudo docker-compose exec -T web python manage.py collectstatic --no-input
-          sudo docker-compose exec web python manage.py createsuperuser --noinput --username $DJANGO_SUPERUSER_USERNAME --email $DJANGO_SUPERUSER_EMAIL
+          sudo docker-compose exec -T web python manage.py createsuperuser \
+            --noinput \
+            --username $DJANGO_SUPERUSER_USERNAME \
+            --email $DJANGO_SUPERUSER_EMAIL
 
   send_message:
     runs-on: ubuntu-latest
